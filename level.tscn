@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://dog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://dragon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://monster.tscn" type="PackedScene" id=3]
+
+[node name="level" type="Node2D"]
+
+[node name="Enemies" type="YSort" parent="."]
+
+sort/enabled = true
+
+[node name="dog" parent="Enemies" instance=ExtResource( 1 )]
+
+fruit = "apple"
+
+[node name="dragon" parent="Enemies" instance=ExtResource( 2 )]
+
+number = 6
+fruit = "orange"
+
+[node name="monster" parent="Enemies" instance=ExtResource( 3 )]
+
+number = 7
+fruit = "banana"
+
+
